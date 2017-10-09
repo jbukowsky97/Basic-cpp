@@ -18,7 +18,7 @@ int main() {
     std::string first[] {"Tomato", "Dog", "Cat", "Fruity", "Squad", "Roll", "Apple", "Frog", "Yellow", "Curved"};
     //list of 10 random words for last words of concert names
     std::string last[] {"Pickles", "Fish", "Laundry", "Pencils", "Pictures", "Tissues", "Lights", "Umbrella", "Fire", "Oranges"};
-    //list of random names for random friend creation
+    //list of random names for random friend list creation
     std::string people[] {"Jonah", "Jon", "Sarah", "Joey", "Patrick", "Emily", "Megan", "Michaela", "Jenna", "Alex", "Bob", "Frank", "Wesley", "Jessica", "Allison", "Taylor"};
     std::vector<Concert> concerts(100);
     //loop thru first words

@@ -6,7 +6,9 @@
 #include <iostream>
 #include <iomanip>
 
-/* default constructor */
+/**********************
+ * default constructor
+ **********************/
 Concert::Concert()
 {
     concertName = "";
@@ -16,7 +18,14 @@ Concert::Concert()
     date = *std::localtime(&t);
 }
 
-/* desired constructor */
+/**********************
+ * desired constructor
+ * 
+ * @param c - concert name
+ * @param f - list of friends
+ * @param des - desire
+ * @param d - date
+ **********************/
 Concert::Concert(std::string c, std::vector<std::string> f, int des, std::tm d)
 {
     concertName = c;
@@ -25,7 +34,13 @@ Concert::Concert(std::string c, std::vector<std::string> f, int des, std::tm d)
     date = d;
 }
 
-/* < operator for comparison of Concert objects */
+/**********************
+ * < operator for comparison of Concert objects
+ * 
+ * @param &other - const reference to Concert object
+ * 
+ * @return boolean - true if this object is less than other
+ **********************/
 bool Concert::operator<(const Concert & other) const
 {
     if (date.tm_year != other.date.tm_year) {
@@ -49,11 +64,14 @@ bool Concert::operator<(const Concert & other) const
     }
 }
 
-/* define how Concert objects will be printed as strings
+/**********************
+ * define how Concert objects will be printed as strings
  *
  * Desired Format:
  *   Concert Name   MM/DD/YYYY  HH:MM:SS    Desire    Friends (list)
- */
+ * 
+ * @return std::ostream - information of how to print object
+ **********************/
 std::ostream& operator<<(std::ostream& os, const Concert& c) {
     std::string friendStr = "[";
     //loop thru friends and add friend to friendStr
